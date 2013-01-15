@@ -18,7 +18,10 @@
     "type": "git",
     "url": "git@github.com:ibrokethat/registry"
   },
-  "main": "registry",
+  "ibrokethat": {
+    "buildClient": true
+  },
+  "main": "registry.js",
   "scripts": {
     "prepublish" : "npm prune",
     "test": "mocha -u bdd"
