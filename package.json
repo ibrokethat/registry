@@ -1,14 +1,12 @@
 {
-  "name": "registry",
-  "description": "object registry",
-  "version": "0.0.1",
+  "name": "super-registry",
+  "description": "super registry",
+  "version": "0.0.2",
   "author": "si@ibrokethat.com",
   "contributors": [
     { "name": "Simon Jefford", "email": "si@ibrokethat.com" }
   ],
-  "dependencies": {
-    "Object": "git+ssh://git@github.com:ibrokethat/Object"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "1.2.x",
     "sinon": "1.3.x"
@@ -17,9 +15,6 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:ibrokethat/registry"
-  },
-  "ibrokethat": {
-    "buildClient": true
   },
   "main": "registry.js",
   "scripts": {

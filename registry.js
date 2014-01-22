@@ -4,9 +4,7 @@
   @description  object registry
 
 */
-require("Object");
-
-var is           = require("is");
+var is           = require("super-is");
 var hasOwnKey    = is.hasOwnKey;
 var objects      = {};
 
@@ -20,7 +18,7 @@ var has = exports.has = function has (id) {
 exports.add = function(object) {
 
   if (has(object.id)) {
-    throw Error.spawn("object with id ("+ object.id +") is already registered with registry");
+    throw new Error("object with id ("+ object.id +") is already registered with registry");
   }
   objects[object.id] = object;
 
@@ -30,12 +28,14 @@ exports.add = function(object) {
 exports.get = function(id) {
 
   if (!has(id)) {
-    throw Error.spawn("object with id ("+ id +") cannot be found in registry");
+    throw new Error("object with id ("+ id +") cannot be found in registry");
   }
   return objects[id];
 
 };
 
+
+exports.objects = objects;
 
 exports.__flush__ = function() {
 
